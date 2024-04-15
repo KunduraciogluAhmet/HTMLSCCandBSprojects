@@ -1,0 +1,305 @@
+/* @font-face {
+    font-family: 'roboto'; /* Buraya bir isim verin */
+    src: url('fonts/Roboto-Regular.ttf'); /* .ttf dosyasının yolunu ekleyin */
+    }
+    */
+   /* .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+      .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .roboto-bold {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .roboto-black {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      
+      .roboto-thin-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+      
+      .roboto-light-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .roboto-regular-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .roboto-medium-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+      
+      .roboto-bold-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      
+      .roboto-black-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+      */
+    
+   /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')*/
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family:'Roboto', sans-serif;
+        line-height: 1.4;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        margin: 0.75rem 0;
+    }
+
+    /* Utility Classes */
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 2rem;
+        overflow: hidden;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-primary {
+        color: #93cb52;
+    }
+    .bg-light {
+        background: #f3f3f3;
+        color: #444;
+    }
+    .bg-dark {
+        background: #222;
+        color: #eee;
+    }
+    .bg-primary{
+        background: #93cb52;
+        color: #eee;
+    }
+
+    .l-heading {
+        font-size: 4rem;
+        margin-bottom: .75rem;
+        line-height: 1.1;
+    }
+    /* buradaki sorunu inceleyelim
+    .m-heading {
+        font-size: 2rem;
+        margin-bottom: .75rem;
+        line-height: 1.1;
+        */
+    .m-heading {
+        font-size: 2rem;
+        margin-bottom: .75rem;
+        line-height: 1.1;
+    }
+
+    .lead {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    .py-1 {padding: 1.5rem 0; }
+    .py-2 {padding: 2rem 0; }
+    .py-3 {padding: 3rem 0; } 
+    .p-1 {padding: 1.5rem; }
+    .p-2 {padding: 2rem; }
+    .p-3 {padding: 3rem; } 
+
+    .btn{
+        display: inline-block;
+        color: #eee;
+        background: #93cb52;
+        padding: .5rem 2rem;
+        border: none;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background: #7ab436;
+    }
+    .btn-dark {
+        background: #333;
+        color: #eee;
+    }
+    .list {
+        margin: .5rem 0;
+        list-style: none;
+    }
+    .list li {
+        padding: .5rem 0;
+        border-bottom: #555 dashed 1px;
+    }
+
+    /* Navbar */
+    #navbar {
+        display: flex;
+        position: sticky;
+        top: 0;
+        margin-top: -10px;
+        margin-left: -10px;
+        width: 100%;
+        height: 40px;
+        background: #333;
+        color : #eee;
+        justify-content:space-between;
+        z-index: 1;
+        padding: 1rem;        
+    }
+    #navbar h1 {
+        display: flex;
+        align-items: left;
+        padding-top: -25px;
+        margin: 0 0.25rem;
+        
+    }
+    #navbar ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+    #navbar ul li a {
+        color: #fefefe;
+        padding: 0.75rem;
+        margin: 0 0.25rem;
+    }
+
+    #navbar ul li a:hover {
+        background: #93cb52;
+        border-radius: 5px;        
+    }
+    
+    /* ShowCase */
+    #showcase{
+        background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        /*margin: -10px;*/
+        /*margin-top: -20px;*/
+        color: #eee;
+    }
+    #showcase .showcase-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        top: 0;        
+        padding: 0 2rem;
+        /* overlay*/
+        position: absolute;
+        top: 65;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.4);
+    }
+    /* Section What We Do */
+    #what .items {
+        display: flex;
+        padding: 1rem;
+    }
+    #what .items .item {
+        flex: 1;
+        width: 33.33%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #what .items .item i{
+        background: #93cb52;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    /* Who We Are Section*/
+    #who {
+        display: flex;
+    }
+    #who div {
+        flex: 1;
+    }
+    #who .who-img {
+        background: url('../img/people.jpg') no-repeat center center/cover;
+    }
+
+
+/* Clients Section */
+#clients .items{
+    display: flex;
+}
+#clients .items img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+/* Contact Section */
+#contact {
+display: flex;
+}
+#contact .map, #contact .contact-form {
+    flex: 1;
+}
+#contact .contact-form .form-group {
+    margin: .75rem;    
+}
+#contact .contact-form label {
+   display: block;  
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%;
+    padding: .5rem;
+}
+.map {
+    background: url('../img/Map.PNG');
+}
